@@ -1,0 +1,24 @@
+@media all and (max-width: 699px) and (min-width: 320px){
+    h1{
+        text-align: center;
+    }
+    #form{
+        display: grid;
+        grid-gap: 1em;
+    }
+    section{
+        display: grid;
+        justify-content: center;
+        width: 100%;
+    }
+    section label{
+        margin-left: 0.2em;
+    }
+    section input{
+        padding: 0.4em;
+    }
+    button{
+        padding: 0.4em;
+        width: 100%;
+    }
+}
