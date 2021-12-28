@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Page Inscription</title>
 </head>
 <body>
-    <form action="" method="get">
+    <form action="" method="get" class="form">
+    <div id="form">
         <h1>KWICK</h1>
         <section>
             <label id="nom" for="nom">Nom d'utilisateur</label>
     		<input type="text" name="nom" id="nom" required>
         </section>
         <section>
-            <label id="passe" for="passe">Mot de passe</label>
-    		<input type="text" name="passe" id="passe" required>
+            <label id="password" for="password">Mot de passe</label>
+    		<input type="password" name="password" id="password" required>
         </section>
         <section>
-            <label id="passe" for="passe">Retapez le mot de passe</label>
-    		<input type="text" name="passe" id="passe" required>
+            <label id="pass" for="password">Retapez le mot de passe</label>
+    		<input type="password" name="password" id="pass" required>
         </section>
         <section>
-            <button>S'INSCRIRE</button>
+            <button type="submit" id="signUp">S'INSCRIRE</button>
         </section>
         <section>
             <a>Se connecter</a>
         </section>
+    </div>
     </form>
-    
+    <script src="main.js"></script>
 </body>
 </html>
