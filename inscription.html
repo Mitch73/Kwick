@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Rajoute de l'attribute action -->
-    <form action="privée.html" method="get" id="signIn" novalidate>
+    <form action="privée.html" method="POST" id="signIn" novalidate>
     <div id="form">
         <h1>KWICK</h1>
         <section>
@@ -17,16 +17,16 @@
     		<input type="text" name="nom" id="nom" required>
         </section>
         <section>
-            <label id="password" for="password">Mot de passe</label>
+            <label id="password" for="password">Mot de passe</label> <!--onkeyup='check();'-->
     		<input type="password" name="password" id="password" required>
         </section>
         <section>
             <label id="pass" for="password">Retapez le mot de passe</label>
-    		<input type="password" name="retapez_le_mot_de_passe" id="retapez_le_mot_de_passe" onkeyup='check();' required>
+    		<input type="password" name="retapez_le_mot_de_passe" id="retapez_le_mot_de_passe" onkeyup='check()' required>
             <span id="message"></span>
         </section>
         <section>
-            <button type="submit" id="signUp">S'INSCRIRE</button>
+            <button type="submit" id="signUp" value="registration" onclick="checkPassword()">S'INSCRIRE</button>
         </section>
         <section> 
             <!-- Rajoute du href -->

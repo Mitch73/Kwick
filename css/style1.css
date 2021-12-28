@@ -1,0 +1,19 @@
+@media all and (max-width: 699px) and (min-width: 320px){
+    main{
+        display: flex;
+        height: 50vh;
+    }
+    #utilisateur{
+        border: 1px solid #000;
+    }
+    button{
+        margin-top: 19.4em;
+    }
+    #envoyer{
+        border: 1px solid #000; 
+    }
+    #envoyer input{
+        /* display: flex; */
+        margin-top: 24em;
+    }
+}

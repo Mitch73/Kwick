@@ -38,17 +38,29 @@ function validateField(field){
     }
 }
 
-// let check = function() {
-//     if (document.getElementById('password').value ==
-//       document.getElementById('retapez_le_mot_de_passe').value) {
-//       document.getElementById('message').style.color = 'green';
-//       document.getElementById('message').innerHTML = 'matching';
-//     } else {
-//       document.getElementById('message').style.color = 'red';
-//       document.getElementById('message').innerHTML = 'not matching';
-//     }
-//   }
+let check = function(e) {
+    if (document.getElementById('password').value ==
+      document.getElementById('retapez_le_mot_de_passe').value) {
+      document.getElementById('message').style.color = 'green';
+      document.getElementById('message').innerHTML = 'matching';
+    //   document.getElementById("submit").disabled = true;
+    } else {
+      document.getElementById('message').style.color = 'red';
+      document.getElementById('message').innerHTML = 'not matching';
+      return false;
+    //   document.getElementById('submit').e.preventDefault();
+    }
+  }
 
+function checkPassword(){
+    if(document.getElementById('password').value == 'hello'){
+    //  alert('Correct Password!'); 
+       location.href = "privée.html";
+      } else {
+    //   alert('Wrong Password!');
+       return false;
+     }
+    }
 
 // section formulaire connecter
 // let btnConnecter = document.getElementById('logIn');
