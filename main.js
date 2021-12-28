@@ -1,7 +1,9 @@
 // section formulaire s'incrire
-let btnInscrire = document.getElementById('signUp');
 
-btnInscrire.addEventListener('submit', function signUp(e){
+// je recupère mon formulaire document.getElementById() dont la variable btnInscrire
+let btnInscrire = document.getElementById('signIn');
+
+btnInscrire.addEventListener('submit', function signIn(e){
     e.preventDefault();
     let fields = document.querySelectorAll('input[required]');
     // cette variable de vient false si l'un des trois n'est pas valide
@@ -30,11 +32,22 @@ function validateField(field){
     if(field.checkValidity()){
         return true;
     }else{
-        // field.classList.add('invalid');
-        // field.previousElementSibling.insertAdjacentHTML('beforeend', `<span class="msg">${field.validationMessage}</span>`);
+        field.classList.add('invalid');
+        field.previousElementSibling.insertAdjacentHTML('afterend', `<span class="msg">${field.validationMessage}</span>`);
         return false;
     }
 }
+
+// let check = function() {
+//     if (document.getElementById('password').value ==
+//       document.getElementById('retapez_le_mot_de_passe').value) {
+//       document.getElementById('message').style.color = 'green';
+//       document.getElementById('message').innerHTML = 'matching';
+//     } else {
+//       document.getElementById('message').style.color = 'red';
+//       document.getElementById('message').innerHTML = 'not matching';
+//     }
+//   }
 
 
 // section formulaire connecter
