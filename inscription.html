@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Page Inscription</title>
+    <title>Page Inscription Kwick</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Rajoute de l'attribute action -->
@@ -14,19 +17,19 @@
         <h1>KWICK</h1>
         <section>
             <label id="nom" for="name">Nom d'utilisateur</label>
-    		<input type="text" name="nom" id="nom" required>
+    		<input type="text" name="name" id="name" required>
         </section>
         <section>
-            <label id="password" for="password">Mot de passe</label> <!--onkeyup='check();'-->
-    		<input type="password" name="password" id="password" required>
+            <label id="password" for="password">Mot de passe</label> <!--onkeyup='check()'-->
+    		<input type="password" id="password" required>
         </section>
         <section>
-            <label id="pass" for="password">Retapez le mot de passe</label>
-    		<input type="password" name="retapez_le_mot_de_passe" id="retapez_le_mot_de_passe" onkeyup='check()' required>
-            <span id="message"></span>
+            <label id="pass" for="password">Retapez le mot de passe</label>                      <!-- onkeyup='check()'-->   
+    		<input type="password" id="retapez_le_mot_de_passe" required>
+            <!-- <span id="message" name="retapez_le_mot_de_passe"></span> -->
         </section>
-        <section>
-            <button type="submit" id="signUp" value="registration" onclick="checkPassword()">S'INSCRIRE</button>
+        <section>                                                <!-- onclick="checkPassword()"-->           
+            <button type="submit" id="signUp" value="registration">S'INSCRIRE</button>
         </section>
         <section> 
             <!-- Rajoute du href -->

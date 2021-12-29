@@ -1,19 +1,66 @@
+body{
+    margin: 12% auto;
+    width: 80%;
+}
+main{
+    display: flex;
+    height: 50vh;    
+}
+h1{
+    text-align: center;
+}
+#utilisateur{
+    border: 1px solid #000;
+    width: 40%;
+}
+button{
+    position: relative;
+    border-radius: 0.5em;
+    top: 20.4em;
+    width: 97%;
+    padding-top: 0.8em;
+    background: #cfe2f3;
+}
+#envoyer{
+    border: 1px solid #000; 
+    width: 60%;    
+    background: #cfe2f3;
+}
+#envoyer input{
+    /* display: flex; */
+    position: relative;
+    top: 25.5em;
+    width: 99%;
+    padding-top: 0.8em;
+    background: #9fc5e8;
+}
+::placeholder{
+    color: #000;
+}
 @media all and (max-width: 699px) and (min-width: 320px){
+    /* body{} */
     main{
         display: flex;
-        height: 50vh;
-    }
-    #utilisateur{
-        border: 1px solid #000;
+        height: 50vh;        
     }
     button{
-        margin-top: 19.4em;
-    }
-    #envoyer{
-        border: 1px solid #000; 
+        top: 18.7em;
     }
     #envoyer input{
-        /* display: flex; */
-        margin-top: 24em;
+        top: 23.7em;
+        width: 95%;
+    }
+}
+@media all and (max-width: 768px) and (min-width: 700px){
+    main{
+        display: flex;
+        height: 50vh;        
+    }
+    button{
+        top: 18.7em;
+    }
+    #envoyer input{
+        top: 23.7em;
+        width: 98%;
     }
 }

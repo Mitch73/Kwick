@@ -1,10 +1,71 @@
-@media all and (max-width: 699px) and (min-width: 320px){
+body{
+    background: #cfe2f3;
+    width: 80%;
+    margin: 10% auto;
+}
+#signIn{
+    border: 1px solid #000;
+    background: #fff;        
+}
+.form{
+    border: 1px solid #000;
+    background: #fff;   
+}
+h1{
+    text-align: center;
+}
+#form{
+    display: grid;
+    grid-gap: 1em;
+}
+section{
+    display: grid;
+    margin: auto;
+    width: 90%;
+}
+section label{
+    margin-left: 0.2em;
+}
+section input{
+    padding: 0.4em;
+    background: #cfe2f3;
+    border: 1px solid #000;
+}
+.msg{
+    color: red;
+}
+main form input:valid {
+    border: 1px solid green;
+}
+main form input.invalid {
+    border: 1px solid red;
+}
+button{
+    background: #cfe2f3;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    padding: 0.4em;
+    margin-top: 0.5em;
+}
+a{
+    text-decoration: underline;
+    text-align: center;
+    color: #000; /*Rajoute*/
+}
+@media all and (max-width: 768px) and (min-width: 700px){
     body{
         background: #cfe2f3;
+        width: 80%;
+        margin: 29% auto;
     }
     #signIn{
         border: 1px solid #000;
         background: #fff;        
+    }
+    .form{
+        border: 1px solid #000;
+        background: #fff;   
     }
     h1{
         text-align: center;
@@ -26,8 +87,69 @@
         background: #cfe2f3;
         border: 1px solid #000;
     }
-    .invalid{
+    .msg{
         color: red;
+    }
+    main form input:valid {
+        border: 1px solid green;
+    }
+    main form input.invalid {
+        border: 1px solid red;
+    }
+    button{
+        background: #cfe2f3;
+        text-align: center;
+        border: 1px solid #000;
+        border-radius: 0.5em;
+        padding: 0.4em;
+        margin-top: 0.5em;
+    }
+    a{
+        text-decoration: underline;
+        text-align: center;
+        color: #000; /*Rajoute*/
+    }
+}
+@media all and (max-width: 699px) and (min-width: 320px){
+    body{
+        background: #cfe2f3;
+    }
+    #signIn{
+        border: 1px solid #000;
+        background: #fff;        
+    }
+    .form{
+        border: 1px solid #000;
+        background: #fff;   
+    }
+    h1{
+        text-align: center;
+    }
+    #form{
+        display: grid;
+        grid-gap: 1em;
+    }
+    section{
+        display: grid;
+        margin: auto;
+        width: 90%;
+    }
+    section label{
+        margin-left: 0.2em;
+    }
+    section input{
+        padding: 0.4em;
+        background: #cfe2f3;
+        border: 1px solid #000;
+    }
+    .msg{
+        color: red;
+    }
+    main form input:valid {
+        border: 1px solid green;
+    }
+    main form input.invalid {
+        border: 1px solid red;
     }
     button{
         background: #cfe2f3;
