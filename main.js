@@ -6,35 +6,35 @@ $(document).ready(function() {
     });
     ping.done(function(data) {
         // console.log(data);
-        let utilisateur = {
+        let user = {
             ready: data['result']['ready'],
         }
     });
     // section formulaire s'incrire
         $("#signUp").on('click', function(e){
             e.preventDefault();
-            let name = $('#name').val();
-            let password = $('#password').val();
+            let nameSignUp = $('#name').val();
+            let passwordSignUp = $('#password').val();
             let confirmPassword = $('#retapez_le_mot_de_passe').val();
 
             let inscription = $.ajax({
-                url: 'http://greenvelvet.alwaysdata.net/kwick/api/signup/' + name + ' ' + password + ' ' + confirmPassword,
+                url: 'http://greenvelvet.alwaysdata.net/kwick/api/signup/' + nameSignUp + ' ' + passwordSignUp + ' ' + confirmPassword,
                 dataType: 'jsonp'
         });  
     
         inscription.done(function(data){
             // console.log(data);
-            let utilisateur = {
+            let user = {
                 // token represente les identifiants créers par l'utilisateur un peu comme une carte d'indentité
                 id: data['result']['id'],            
                 token: data['result']['token']
             }
             // la méthode JSON.stringify() permet de convertir les valeur de js en JSON et les stocker dans le localStoragesetItem()
-            let json_data = JSON.stringify(utilisateur);
-            localStorage.setItem('utilisateur', json_data); 
+            let json_data = JSON.stringify(user);
+            localStorage.setItem('user', json_data); 
 
             if (data['result']['status'] === 'done') {
-                window.location = 'messagerie.html';
+                window.location = '../messagerie.html';
             } else {
                 $('.msg').fadeIn();
             }
@@ -54,16 +54,16 @@ $(document).ready(function() {
         connect.done(function(data) {
             // console.log(data);
 
-            let utilisateur = {
+            let user = {
                 id: data['result']['id'],
                 token: data['result']['token']
             }
 
-            let json_data = JSON.stringify(utilisateur);
-            localStorage.setItem('utilisateur', json_data);
+            let json_data = JSON.stringify(user);
+            localStorage.setItem('user', json_data);
 
             if (data['result']['status'] === 'done') {
-                window.location = 'messagerie.html';
+                window.location = '../messagerie.html';
             } else {
                 $('.msg').fadeIn();
             }
@@ -71,6 +71,24 @@ $(document).ready(function() {
         })
     });
 
+    $("#logout").on('click', function(e) {
+        e.preventDefault();
+
+        let user_data = JSON.parse(localStorage.getItem('user')), //transforme en object
+            user_id = user_data.id,
+            token = user_data.token;
+
+        let logout = $.ajax({
+            url: 'http://greenvelvet.alwaysdata.net/kwick/api/logout/' + token + '/' + user_id,
+            dataType: 'jsonp'
+        });
+
+        logout.done(function(data) {
+            localStorage.clear();
+            window.location = '../index.html';
+        })
+
+    })
 });
 
 // $('#password, #retapez_le_mot_de_passe').on('keyup', function () {        
