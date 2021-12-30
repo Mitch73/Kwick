@@ -32,14 +32,15 @@ section input{
     border: 1px solid #000;
 }
 .msg{
+    display: none;
     color: red;
 }
-main form input:valid {
+/* main form input:valid {
     border: 1px solid green;
 }
 main form input.invalid {
     border: 1px solid red;
-}
+} */
 button{
     background: #cfe2f3;
     text-align: center;

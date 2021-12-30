@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Rajoute de l'attribute action -->
-    <form action="privée.html" method="POST" id="signIn" novalidate>
+    <form action="" method="get" id="signIn">
     <div id="form">
         <h1>KWICK</h1>
         <section>
@@ -21,12 +21,12 @@
         </section>
         <section>
             <label id="password" for="password">Mot de passe</label> <!--onkeyup='check()'-->
-    		<input type="password" id="password" required>
+    		<input type="password"  name="password" id="password" required>
         </section>
         <section>
             <label id="pass" for="password">Retapez le mot de passe</label>                      <!-- onkeyup='check()'-->   
-    		<input type="password" id="retapez_le_mot_de_passe" required>
-            <!-- <span id="message" name="retapez_le_mot_de_passe"></span> -->
+    		<input type="password"  name="retapez_le_mot_de_passe" id="retapez_le_mot_de_passe" required>
+            <span class="msg"></span>
         </section>
         <section>                                                <!-- onclick="checkPassword()"-->           
             <button type="submit" id="signUp" value="registration">S'INSCRIRE</button>
