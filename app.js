@@ -74,20 +74,3 @@ function validatePassword(){
   
 password.onchange = validatePassword;
 confirmPassword.onkeyup = validatePassword;
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('signUp').addEventListener('click', sendReq);
-    localStorage.setItem('user',  
-    JSON.stringify('http://greenvelvet.alwaysdata.net/kwick/api/ping')
-    )
-})
-
-let sendReq = (ev) => {
-    let url = 'http://greenvelvet.alwaysdata.net/kwick/api/signup/';
-    let token = JSON.parse(localStorage.getItem('userToken'));
-}
-
-let user = {
-    id: data['result']['id'],
-    token: data['result']['token']
-  }
