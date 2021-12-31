@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Page Inscription Kwick</title>
@@ -12,24 +11,24 @@
 </head>
 <body>
     <!-- Rajoute de l'attribute action -->
-    <form action="" method="get" id="signIn">
+    <form action="mesagerie.html" method="get" id="signIn" novalidate>
     <div id="form">
         <h1>KWICK</h1>
         <section>
-            <label id="nom" for="name">Nom d'utilisateur</label>
+            <label for="name">Nom d'utilisateur</label>
     		<input type="text" name="name" id="name" required>
         </section>
         <section>
-            <label id="password" for="password">Mot de passe</label> <!--onkeyup='check()'-->
+            <label for="password">Mot de passe</label> <!--onkeyup='check()'-->
     		<input type="password"  name="password" id="password" required>
         </section>
         <section>
-            <label id="pass" for="password">Retapez le mot de passe</label>                      <!-- onkeyup='check()'-->   
+            <label for="password">Retapez le mot de passe</label>                      <!-- onkeyup='check()'-->   
     		<input type="password"  name="retapez_le_mot_de_passe" id="retapez_le_mot_de_passe" required>
-            <span class="msg"></span>
+            <!-- <span class="msg"></span> -->
         </section>
         <section>                                                <!-- onclick="checkPassword()"-->           
-            <button type="submit" id="signUp" value="registration">S'INSCRIRE</button>
+            <button type="submit" id="signUp"  class="signUp" value="registration">S'INSCRIRE</button>
         </section>
         <section> 
             <!-- Rajoute du href -->
@@ -37,6 +36,7 @@
         </section>
     </div>
     </form>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="app.js"></script>
 </body>
 </html>

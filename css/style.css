@@ -31,10 +31,10 @@ section input{
     background: #cfe2f3;
     border: 1px solid #000;
 }
-.msg{
+/* .invalid{
     display: none;
     color: red;
-}
+} */
 /* main form input:valid {
     border: 1px solid green;
 }

@@ -34,7 +34,7 @@ $(document).ready(function() {
             localStorage.setItem('user', json_data); 
 
             if (data['result']['status'] === 'done') {
-                window.location = '../messagerie.html';
+                window.location = 'messagerie.html';
             } else {
                 $('.msg').fadeIn();
             }
@@ -87,7 +87,6 @@ $(document).ready(function() {
             localStorage.clear();
             window.location = '../index.html';
         })
-
     })
 });
 
